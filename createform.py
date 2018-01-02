@@ -36,3 +36,17 @@ class CreateForm(FlaskForm):
     submit = SubmitField('Create an account')
     login = SubmitField('Login')
 
+
+class NewPost(FlaskForm):
+    subject = TextField('Subject', validators=[
+        validators.Length(min=1, max=50, message="Subject must be between 1 and 50 characters long"),
+        validators.Required("Subject is required")
+    ])
+
+    message = TextAreaField('Message', validators=[
+        validators.Length(min=1, max=200, message="Message must be between 1 and 200 characters long"),
+        validators.Required('Message is required')
+    ])
+    
+    post = SubmitField('Post')
+

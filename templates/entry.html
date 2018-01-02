@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+   <li id="mouse-over"><a href="{{ url_for('blog') }}">Main Blog</a></li>
+   <li id="mouse-over"><a href="{{ url_for('post') }}">Add a Blog Entry</a></li>
+{% endblock %}
+
+
+{% block content %}
+    <h2 style="text-align: center">{{entry.subject}}</h2>
+    <p>{{entry.message}}</p>
+
+{% endblock %}
+
+{% block foot %}
+ <p>Tampabay LaunchCode 2017</p>
+{% endblock %}

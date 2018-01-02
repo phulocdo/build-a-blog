@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+   <li id="mouse-over"><a href="{{ url_for('home') }}">Home</a></li>
+   <li id="mouse-over"><a href="{{ url_for('blog') }}">Main Blog</a></li>
+{% endblock %}
+
+
+{% block content %}
+           <form  method="POST" action="{{ url_for('post') }}">
+		   {{ form.hidden_tag() }}
+		<div class="form-group">
+    		   <p>{{ form.subject.label}}<br> 
+	           {{form.subject(cols='80',class="form-control")}} 
+
+		   {% for error in form.subject.errors %} 
+		       <br><small style="color: red">{{error}}</small> 
+		   {% endfor %}</p>
+		</div>
+		<div class="form-group">
+
+		   <p>{{form.message.label}}<br>
+	           {{form.message(rows='6', cols='80')}}
+
+		   {% for error in form.message.errors %} 
+		       <br><small style="color: red">{{error}}</small> 
+		   {% endfor %}</p>
+		</div>
+    		   <p>{{form.post}}</p>
+       </form>
+{% endblock %}
+
+
+{% block foot %}
+  <p>TampaBay LaunchCode 2017</p>
+{% endblock %}
+

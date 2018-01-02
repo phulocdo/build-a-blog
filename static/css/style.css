@@ -1,8 +1,17 @@
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  /*padding: 0;*/
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #444;
+
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 3em;
+
+}
+
+body p {
+  margin: 10px;
 }
  
 /*
@@ -48,7 +57,8 @@ div.jumbo {
 }
  
 h2 {
-  font-size: 3em;
+  font-size: 2em;
+  font-family: 'Peralta', cursive;
   margin-top: 40px;
   text-align: center;
   letter-spacing: -2px;
@@ -56,6 +66,7 @@ h2 {
  
 h3 {
   font-size: 1.7em;
+  font-family: 'Peralta', cursive;
   font-weight: 100;
   margin-top: 30px;
   text-align: center;
@@ -109,9 +120,28 @@ footer {
  width:100%;
  height:47px;   /* Height of the footer */
  background:black;
+ height: 3em;
 
 }
 
 #mouse-over:hover {
   background-color: #6cf; 
+}
+
+table {
+  /*border-collapse: collapse;*/
+  border: 1px solid black;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+html {
+  height: 100%;
 }

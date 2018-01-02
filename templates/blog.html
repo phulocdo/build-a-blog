@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+   <li id="mouse-over"><a href="{{ url_for('home') }}">Home</a></li>
+   <li id="mouse-over"><a href="{{ url_for('post') }}">Add a Blog Entry</a></li>
+{% endblock %}
+
+{% block container %}
+  <div class="breadcrumb-item">
+    <h2>Blog Entry</h2>
+    <p style="text-align: center">Sort by:<small><a href="?order=new">newest</a>|<a href="?order=old">oldest</a></small></p>
+  </div>
+{% endblock %}
+
+{% block content %}
+   <table class="table">
+     <thead class="thead-inverse">
+      <tr>
+	<th>Subject</th>
+	<th>Message</th>
+	<th>Posted</th>
+     </tr>
+     </thead>
+     <tbody>
+      {% for post in  posts%}
+	 <tr>
+	    <td><a href="http://localhost:8000/blog?id={{post.id}}">{{post.subject}}</td>
+	    <td>{{post.message}}</td>
+	    <td>{{post.create_date}}</td>
+	 </tr>
+       {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
+
+{% block foot %}
+ <p>Tampabay LaunchCode 2017</p>
+{% endblock %}
