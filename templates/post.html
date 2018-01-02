@@ -5,6 +5,12 @@
    <li id="mouse-over"><a href="{{ url_for('blog') }}">Main Blog</a></li>
 {% endblock %}
 
+{% block container %}
+  <div class="breadcrumb-item">
+    <h2>Add a Blog Entry</h2>
+  </div>
+{% endblock %}
+
 
 {% block content %}
            <form  method="POST" action="{{ url_for('post') }}">
