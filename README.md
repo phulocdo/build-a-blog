@@ -1,6 +1,4 @@
-Tampabay LaunchCode 2017
-Unit#2 
-Assignment: Build-a-Blog 
+Build-a-Blog 
 Objective: Build a web app that displays blog posts on a main page and allows
            users to add new blog post on a form page. 
 
